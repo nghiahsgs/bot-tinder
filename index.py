@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
+import getpass
 from time import sleep
 class TinderBot():
     def __init__(self):
@@ -31,7 +32,9 @@ class TinderBot():
         email_ip.send_keys('nghiahsgs')
 
         pass_ip = self.driver.find_element_by_css_selector('#pass')
-        pass_ip.send_keys(input('enter your password'))
+        pw=getpass.getpass(prompt='Password: ')
+        pass_ip.send_keys(pw)
+        
         
         login_btn = self.driver.find_element_by_css_selector(
             'input[name="login"]')
@@ -65,8 +68,16 @@ class TinderBot():
                 try:
                     self.keep_swiping()
                 except Exception:
-                    pass
+                    try:
+                        self.ignoreInterested()
+                    except Exception:
+                        pass
             sleep(1)
+    def ignoreInterested(self):
+        btn_not_interested = self.driver.find_element_by_xpath(
+            '//*[@id="modal-manager"]/div/div/div[2]/button[2]')
+        btn_not_interested.click()
+
     def like(self):
         btn_like = self.driver.find_element_by_xpath(
             '//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/button[3]')

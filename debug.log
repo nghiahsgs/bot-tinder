@@ -24,3 +24,7 @@
 [0203/125517.913:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\AnDongPc\AppData\Local\Temp\scoped_dir11508_468775753\Crashpad\reports\f1f7f6c0-68ed-45cf-9bed-b0ca5683989e.dmp: The process cannot access the file because it is being used by another process. (0x20)
 [0203/125750.103:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0203/125750.103:ERROR:exception_snapshot_win.cc(98)] thread ID 436 not found in process
+[0203/144340.354:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0203/144340.355:ERROR:exception_snapshot_win.cc(98)] thread ID 14976 not found in process
+[0203/145121.451:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0203/145121.452:ERROR:exception_snapshot_win.cc(98)] thread ID 16260 not found in process
